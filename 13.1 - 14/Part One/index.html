@@ -78,7 +78,20 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
-      // Add your code here!
+      // Part One
+      $(() => console.log("Let's get ready to party with jQuery!"));
+      $('article img').addClass('image-center');
+      $('article p').last().remove();
+      $('h1').css('font-size', Math.random() * 100);
+      $('ol').append($('<li>blah blah blah</li>'));
+      $('aside').empty().append('<p>sorry about the list :(</p>');
+      $('.form-control').on('keyup blur change', () => {
+        let red = $('.form-control').eq(0).val();
+        let blue = $('.form-control').eq(1).val();
+        let green = $('.form-control').eq(2).val();
+        $('body').css('background-color', `rgb(${red}, ${green}, ${blue})`);
+      });
+      $('img').on('click', (e) => e.target.remove());
     </script>
   </body>
 </html>

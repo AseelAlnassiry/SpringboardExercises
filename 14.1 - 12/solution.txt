@@ -1,0 +1,11 @@
+1. HTTP is Hyper Text Transfer Protocol 
+2. URL is Uniform Resource Locator
+3. DNS is Domain Name System
+4. A query string is a string that includes key value pairs that gets passed in the URL
+5. 
+  -Get requests typically grab data without altering any non-meta data.
+  -Post requests typically send data to the server, potentially altering non-meta and meta data.
+6. HTTP requests request from a server that follows HTTP protocol.
+7. HTTP responses are responses from a server that follows HTTP protocol.
+8. HTTP headers provide additional information to the server witht things like Cookies, queries on the requests and content-type and last-modified on the response side.
+9. The browser turns the URL into an IP address with the help of cahching and dns servers, the browser makes the HTTP request with the correct headers, the server responds with the HTML and then the css and javascript and other assets. 

@@ -1,0 +1,34 @@
+Step One: Simplifying Expressions
+1. O(n)
+2. O(n)
+3. O(1)
+4. O(n^3)
+5. O(n)
+6. O(n)
+7. O(nlog(n))
+8. O(n^2)
+9. O(1)
+10. O(n^2)
+
+Step Two: Calculating Time Complexity
+1. o(n)
+2. o(n)
+3. o(1)
+4. o(n)
+5. o(n^2)
+6. o(n)
+
+Part 3 - short answer
+1. true
+2. true
+3. false
+4. o(n)
+5. o(n)
+6. o(n)
+7. o(nlogn)
+8. o(n)
+9. o(1)
+10. o(n)
+11. o(1)
+12. o(n)
+13. o(n)

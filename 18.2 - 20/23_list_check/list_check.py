@@ -7,3 +7,4 @@ def list_check(lst):
         >>> list_check([[1], "nope"])
         False
     """
+    return all(type(x) == list for x in lst)

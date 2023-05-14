@@ -27,7 +27,7 @@ body {
   font-size: 3rem;
 }
 
-.index-container a {
+.index-container button {
   display: flex;
   align-items: center;
   justify-content: center;

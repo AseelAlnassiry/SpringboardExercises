@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block title %} Question {{question_id}} {% endblock %} {% block content %}
+
+<main class="question-container">
+  {% for msg in get_flashed_messages() %}
+  <p>{{msg}}</p>
+  {% endfor %}
+  <h1>Thank You!</h1>
+  <h2>:)</h2>
+</main>
+
+{% endblock %}

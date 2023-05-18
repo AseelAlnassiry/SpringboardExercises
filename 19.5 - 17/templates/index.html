@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block title %} Index {% endblock %} {% block content %}
+
+<main>
+  <header id="title-content">
+    <h1>Boggle</h1>
+  </header>
+  <section id="board-content">
+    {% for row in game_board %}
+      {% for cell in row %}
+      <div class="board-cell">
+        <span class="inner-cell">{{cell}}</span>
+      </div>
+      {% endfor %}
+    {% endfor %}
+  </section>
+  <footer>
+    By Aseel Alnassiry 
+  </footer>
+</main>
+
+{% endblock %}

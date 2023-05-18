@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(163, 255, 252);
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#board-content {
+
+  display: grid;
+  grid-template-columns: repeat(5, 9rem);
+  grid-template-rows: repeat(5, 9rem);
+}
+
+.board-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border: 1px solid black;
+}
+
+footer {
+  font-weight: 400;
+}
+

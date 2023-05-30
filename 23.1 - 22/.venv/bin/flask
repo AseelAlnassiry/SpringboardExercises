@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/aseelalnassiry/Documents/Springboard/Exercises/23.1 - 22/.venv/bin/python3.11" "$0" "$@"
+'''exec' "/Users/aseelalnassiry/Documents/Springboard/SpringboardExercises/23.1 - 22/.venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

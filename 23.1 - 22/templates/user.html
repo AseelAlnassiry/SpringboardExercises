@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title %} {{user.first_name}} {{user.last_name}} {% endblock %} {%
+block content %}
+<section class="h-full w-full flex items-center justify-center">
+  <main class="flex justify-center items-center border-2 border-gray-700 rounded-sm w-80">
+    <div class="">
+      <img
+        class="h-48 rounded-full"
+        src="{{user.image_url}}"
+        alt="{{user.first_name}} {{user.last_name}}'s profile photo" />
+    </div>
+    <div class="flex flex-col gap-4">
+      <div>
+        <h2>{{user.first_name}} {{user.last_name}}</h2>
+      </div>
+      <div class="flex gap-2">
+        <form action="/users/{{user.id}}/delete" method="POST">
+          <button class="bg-red-700 text-white py-1 px-2 rounded">Delete</button>
+        </form>
+        <a href="/users/{{user.id}}/edit" class="bg-red-700 text-white py-1 px-2 rounded">Edit</a>
+      </div>
+    </div>
+  </main>
+</section>
+{% endblock %}

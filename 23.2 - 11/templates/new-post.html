@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block title %} New Post {% endblock %} {% block content %}
+<main class="flex flex-col items-center">
+  <form action="/posts/{{user_id}}/new" method="post" class="flex flex-col items-center">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" />
+    <label for="content">Content</label>
+    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    <button>Submit</button>
+  </form>
+</main>
+{% endblock %}

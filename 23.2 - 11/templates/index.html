@@ -1,5 +1,13 @@
-{% extends 'base.html' %} {% block title %} Home Page {% endblock %} {%
-  block content %}
-    
-  {% endblock %}
-  
+{% extends 'base.html' %} {% block title %} Home Page {% endblock %} {% block content %}
+<main class="flex flex-col items-center">
+  <h1 class="text-4xl py-10">Blogly</h1>
+  <section class="bg-gray-400 px-20 py-20 rounded-md">
+    <h2 class="text-2xl pb-5">Users</h2>
+    <ul class="text-xl">
+      {% for user in users %}
+      <li class="py-1"><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+{% endblock %}

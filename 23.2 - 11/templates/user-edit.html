@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} {{user.first_name}} {{user.last_name}} {% endblock %} {%
+block content %}
+<main class="flex flex-col items-center">
+  <form action="/users/{{user.id}}/edit" method="post">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" id="first_name" value="{{user.first_name}}" />
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" id="last_name" value="{{user.last_name}}" />
+    <label for="image_url">Image URL</label>
+    <input type="text" name="image_url" id="image_url" value="{{user.image_url}}" />
+    <button>Submit Changes</button>
+  </form>
+</main>
+{% endblock %}

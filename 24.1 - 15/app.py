@@ -1,9 +1,9 @@
 from flask import Flask, session, request, render_template, flash
-from models import db, connect_db
+from models import db, connect_db, Pet
 
 app = Flask(__name__)
 app.secret_key = "PROWLERCAR"
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://adoption"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///adoption"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["DEBUT_TB_INTERCEPT_REDIRECTS"] = False
 app.config["SQLALCHEMY_ECHO"] = False
@@ -14,5 +14,5 @@ connect_db(app)
 
 @app.route("/")
 def index():
-    return "hi there I work"
-
+    pets = Pet.query.all()
+    return render_template("index.html", pets=pets)

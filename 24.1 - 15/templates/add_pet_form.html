@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %} Home Page {% endblock %} {% block
+content %}
+<section class="h-screen w-screen flex items-center justify-center">
+  <form
+    method="POST"
+    class="flex flex-col gap-4 items-center justify-center bg-indigo-500 px-12 py-12 rounded-md"
+  >
+    {{form.hidden_tag() }}
+    <!--  -->
+    {% for field in form if field.widget.input_type !='hidden' %}
+    <!--  -->
+    <p class="flex justify-between items-center gap-10 w-[100%]">
+      {{ field.label }} {{ field }}
+    </p>
+
+    {% endfor %}
+    <button class="bg-emerald-300 py-3 px-3 rounded-md">Add Pet</button>
+  </form>
+</section>
+{% endblock %}

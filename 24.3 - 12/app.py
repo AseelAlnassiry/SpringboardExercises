@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 from models import Cupcake, connect_db, db
 
 app = Flask(__name__)
@@ -11,3 +11,9 @@ app.config["SQLALCHEMY_RECORD_QUERIES"] = True
 
 connect_db(app)
 
+
+@app.get("/api/cupcakes")
+def get_all_cupcakes():
+    res = Cupcake.query.all()
+    serialized = [Cupcake.serialize(d) for d in res]
+    return jsonify(cupcakes=serialized)

@@ -17,3 +17,12 @@ class Cupcake(db.Model):
     size = db.Column(db.Text, nullable=False)
     rating = db.Column(db.Float, nullable=False)
     image = db.Column(db.Text, nullable=False, default=DEFAULT_CUPCAKE_IMAGE)
+
+    def serialize(cupcake):
+        return {
+            "id": cupcake.id,
+            "flavor": cupcake.flavor,
+            "size": cupcake.size,
+            "rating": cupcake.rating,
+            "image": cupcake.image,
+        }

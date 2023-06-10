@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="h-screen w-screen bg-emerald-200 flex flex-col items-center">
+    <h1 class="text-4xl font-semibold py-12">Cupcake Authority</h1>
+    <section class="flex items-center justify-center gap-40 w-screen">
+      <ul
+        id="all-cupcakes"
+        class="flex items-center justify-center gap-10"
+      ></ul>
+      <form
+        id="add-form"
+        class="bg-pink-300 py-12 px-4 h-full rounded-md flex flex-col items-center gap-2 shadow-md"
+      >
+        <h2 class="text-2xl font-semibold">ADD A CUPCAKE!</h2>
+        <div
+          class="bg-fuchsia-200 p-4 mx-2 rounded-md w-[300px] flex items-center justify-between"
+        >
+          <label for="flavor">Flavor</label>
+          <input
+            type="text"
+            name="flavor"
+            id="flavor"
+            class="bg-fuchsia-100 rounded-md focus:outline-none"
+            required
+          />
+        </div>
+        <div
+          class="bg-fuchsia-200 p-4 mx-2 rounded-md w-[300px] flex items-center justify-between"
+        >
+          <label for="rating">Rating</label>
+          <input
+            type="number"
+            name="rating"
+            id="rating"
+            class="bg-fuchsia-100 rounded-md focus:outline-none"
+            step=".01"
+            required
+          />
+        </div>
+        <div
+          class="bg-fuchsia-200 p-4 mx-2 rounded-md w-[300px] flex items-center justify-between"
+        >
+          <label for="size">Size</label>
+          <input
+            type="text"
+            name="size"
+            id="size"
+            class="bg-fuchsia-100 rounded-md focus:outline-none"
+            required
+          />
+        </div>
+        <div
+          class="bg-fuchsia-200 p-4 mx-2 rounded-md w-[300px] flex items-center justify-between"
+        >
+          <label for="image">Image</label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            class="bg-fuchsia-100 rounded-md focus:outline-none"
+          />
+        </div>
+        <button
+          class="px-4 py-2 bg-fuchsia-200 text-xl font-semibold rounded-md"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

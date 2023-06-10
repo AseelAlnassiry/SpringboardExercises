@@ -75,7 +75,6 @@ class CupcakeViewsTestCase(TestCase):
         with app.test_client() as client:
             url = f"/api/cupcakes/{self.cupcake.id}"
             resp = client.get(url)
-
             self.assertEqual(resp.status_code, 200)
             data = resp.json
             self.assertEqual(
@@ -95,9 +94,8 @@ class CupcakeViewsTestCase(TestCase):
         with app.test_client() as client:
             url = "/api/cupcakes"
             resp = client.post(url, json=CUPCAKE_DATA_2)
-
             self.assertEqual(resp.status_code, 201)
-
+            
             data = resp.json
 
             # don't know what ID we'll get, make sure it's an int & normalize

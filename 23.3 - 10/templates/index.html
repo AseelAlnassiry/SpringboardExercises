@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %} Home Page {% endblock %} {% block content %}
+<main class="h-full w-full flex flex-col items-center gap-10">
+  
+  <ul class="flex items center gap-20 flex-wrap px-20 pb-10">
+    {% for user in users %}
+    <li
+      class="bg-pink-300 px-6 py-4 flex flex-col items-center gap-10 justify-center rounded-xl shadow-md w-[240px]">
+      <img src="{{user.image_url}}" alt="profile-image" class="h-40 w-40 rounded-full shadow-md" />
+      <span class="text-center text-xl font-semibold bg-fuchsia-200 p-2 rounded-md shadow-md"
+        >{{user.first_name.capitalize()}} {{user.last_name.capitalize()}}</span
+      >
+      <button class="text-lg font-semibold bg-indigo-200 p-2 rounded-md shadow-md text-gray-600">
+        <a href="/users/{{user.id}}">Check Out!</a>
+      </button>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
+{% endblock %}

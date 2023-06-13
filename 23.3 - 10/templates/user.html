@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% block title %} Home Page {% endblock %} {% block content %}
+<div class="flex items-start gap-10">
+  <li
+    class="bg-pink-300 px-6 py-4 flex flex-col items-center gap-10 justify-center rounded-xl shadow-md w-[240px]">
+    <img src="{{user.image_url}}" alt="profile-image" class="h-40 w-40 rounded-full shadow-md" />
+    <span class="text-center text-xl font-semibold bg-fuchsia-200 p-2 rounded-md shadow-md"
+      >{{user.first_name.capitalize()}} {{user.last_name.capitalize()}}</span
+    >
+    <div class="flex items-center gap-2">
+      <button
+        class="text-md font-semibold bg-blue-400 p-1 text-white rounded-md shadow-md text-gray-600">
+        <a href="/users/{{user.id}}">Add Post</a>
+      </button>
+      <button class="text-md font-semibold bg-green-300 p-1 rounded-md shadow-md text-gray-600">
+        <a href="/users/{{user.id}}/edit">Edit User</a>
+      </button>
+    </div>
+    <form action="/users/{{user.id}}/delete" method="post">
+      <button class="text-md font-semibold bg-red-400 p-1 rounded-md shadow-md text-white">
+        Delete User
+      </button>
+    </form>
+  </li>
+
+  <div
+    class="bg-pink-300 px-6 py-4 flex flex-col items-center gap-10 rounded-xl shadow-md w-[900px] h-[750px] overflow-auto">
+    <article class="bg-pink-200 p-2 rounded-md shadow-md flex flex-col items-center gap-10">
+      <h2 class="text-xl font-semibold">Why Jacob is such a weak fucking sister</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem officiis molestias ullam
+        dolores animi autem doloribus nesciunt maiores sapiente quas ut, quis, cumque corporis
+        consequuntur et iure. Odio, ullam nemo! Reiciendis laboriosam, voluptas cum neque eos
+        perspiciatis voluptatibus laborum quo. Quae fugiat nisi quod sint nam quisquam,
+        reprehenderit voluptate, quasi rem perspiciatis omnis praesentium quas minima aut voluptatem
+        provident? Vel. Voluptatem, neque! Libero hic non tempora ratione animi illo facere
+        laboriosam voluptatem, quos odio eligendi perferendis dolore voluptas dicta, molestiae esse
+        rerum dolor nesciunt itaque accusantium id aliquid commodi? Error. Ut rem nostrum hic eaque
+        iste cum! Quidem, iusto rem? Magni ad nisi reiciendis facilis aliquam facere mollitia
+        voluptate vero. Necessitatibus, odit veniam cum itaque nulla et porro eos omnis! Assumenda,
+        quibusdam. Iure, quaerat ab eaque dolorum ullam nihil consequuntur! Pariatur atque provident
+        maxime quaerat mollitia possimus quasi architecto reprehenderit. Fuga aliquam, magnam
+        molestiae vitae maiores neque. Pariatur, architecto cumque?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugit deserunt ad harum,
+        earum porro. Labore asperiores atque facilis vero neque, unde accusantium modi nostrum
+        similique voluptate fugiat quisquam qui. Laudantium adipisci consequuntur magnam doloremque
+        aut amet laboriosam temporibus rerum repellat eveniet! Deserunt, ex? Soluta praesentium
+        pariatur incidunt ducimus saepe vero quas quo minus? Mollitia magnam tempore optio atque
+        debitis!
+      </p>
+    </article>
+    <article class="bg-pink-200 p-2 rounded-md shadow-md flex flex-col items-center gap-10">
+      <h2 class="text-xl font-semibold">Marie, please come back I want to see my kids...</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur optio sint sapiente
+        neque ipsam, placeat alias nostrum voluptates fugit dolor quos aspernatur consequuntur
+        dolorem culpa repudiandae perspiciatis, vitae soluta a.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio est unde aliquid tempore,
+        neque magni velit earum possimus odit doloremque, culpa accusamus omnis mollitia. Aliquid
+        rem at quasi omnis consequuntur? Repudiandae modi sint nostrum. Asperiores quos saepe rerum,
+        nemo ex distinctio quidem illo officiis, amet totam assumenda reiciendis culpa aut incidunt
+        commodi, quaerat ea mollitia modi dicta enim a laudantium. Enim, provident repellendus
+        similique veritatis sint rerum aut maiores aperiam deleniti rem est velit saepe, itaque
+        eaque pariatur sit sed iure aspernatur, commodi dolorem quisquam ut quis! Et, voluptates
+        quae.
+      </p>
+    </article>
+  </div>
+</div>
+{% endblock %}
